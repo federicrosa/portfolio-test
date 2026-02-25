@@ -3,6 +3,7 @@ import "@once-ui-system/core/css/tokens.css";
 import "@/resources/custom.css";
 
 import classNames from "classnames";
+import Script from "next/script";
 
 import { Footer, Header, Providers, RouteGuard } from "@/components";
 import { baseURL, dataStyle, effects, fonts, home, style } from "@/resources";
@@ -15,13 +16,8 @@ import {
   type SpacingToken,
   type opacity,
 } from "@once-ui-system/core";
-<<<<<<< HEAD
 import { Analytics } from "@vercel/analytics/next";
-=======
-import { Footer, Header, RouteGuard, Providers } from "@/components";
-import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
 import { SpeedInsights } from "@vercel/speed-insights/next";
->>>>>>> 751e0e3 (add speed insights)
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -52,10 +48,7 @@ export default async function RootLayout({
       )}
     >
       <head>
-        <script
-          id="theme-init"
-          dangerouslySetInnerHTML={{
-            __html: `
+        <Script id="theme-init" strategy="beforeInteractive">{`
               (function() {
                 try {
                   const root = document.documentElement;
@@ -106,9 +99,7 @@ export default async function RootLayout({
                   document.documentElement.setAttribute('data-theme', 'dark');
                 }
               })();
-            `,
-          }}
-        />
+            `}</Script>
       </head>
       <Providers>
         <Column
