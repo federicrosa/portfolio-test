@@ -15,7 +15,13 @@ import {
   type SpacingToken,
   type opacity,
 } from "@once-ui-system/core";
+<<<<<<< HEAD
 import { Analytics } from "@vercel/analytics/next";
+=======
+import { Footer, Header, RouteGuard, Providers } from "@/components";
+import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+>>>>>>> 751e0e3 (add speed insights)
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -166,6 +172,7 @@ export default async function RootLayout({
           <Footer />
           <Analytics />
         </Column>
+        <SpeedInsights />
       </Providers>
     </Flex>
   );

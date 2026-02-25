@@ -13,7 +13,11 @@
     "@mdx-js/loader": "^3.1.0",
     "@next/mdx": "^16.0.10",
     "@once-ui-system/core": "latest",
+<<<<<<< HEAD
     "@vercel/analytics": "^1.6.1",
+=======
+    "@vercel/speed-insights": "^1.3.1",
+>>>>>>> 751e0e3 (add speed insights)
     "classnames": "^2.5.1",
     "cookie": "^1.0.2",
     "gray-matter": "^4.0.3",
@@ -29,8 +33,8 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/cookie": "^0.6.0",
-    "@types/node": "^20.17.30",
-    "@types/react": "^19.2.4",
+    "@types/node": "^20.19.33",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.25.0",
     "typescript": "^5.8.3",
